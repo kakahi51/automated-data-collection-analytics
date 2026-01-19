@@ -1,39 +1,49 @@
 # Automated Data Collection & Analytics Pipeline
 
-This repository demonstrates an automated data collection pipeline where
-raw transactional data is captured via RFID devices and processed into
-structured analytics-ready datasets.
+## Background
+This project demonstrates an end-to-end automated data collection and analytics pipeline designed to transform raw transactional events into structured, analytics-ready datasets. The system focuses on data reliability, structure, and usability for operational analysis rather than hardware implementation.
+
+## Problem Statement
+Manual data recording and semi-automated systems often lead to delayed reporting, duplicated records, and unreliable operational metrics. This project addresses how automated ingestion and structured data modeling can improve data accuracy and enable consistent KPI monitoring.
 
 ## Project Scope
-- Automated data ingestion (RFID → backend)
-- Relational database design
-- Data quality validation
-- KPI-ready analytical queries
+- Automated data ingestion from real-time sources
+- Relational database design for transactional data
+- Data quality validation and reconciliation
+- KPI-ready analytical queries for operational monitoring
 
-Hardware components are treated purely as data sources.
-The main focus is on data reliability, structure, and analytics usability.
+> Hardware components are treated strictly as data sources. The primary focus is on data engineering and analytics workflows.
 
 ## Data Pipeline Overview
-RFID Scan → API Endpoint → MySQL Database → Analytics Queries → Dashboard Logic
+RFID Scan Event  
+→ API Endpoint  
+→ MySQL Transactional Database  
+→ Data Validation & Aggregation Queries  
+→ Analytics & Dashboard Logic
 
 ## Key Features
-- Automated ingestion without manual input
-- Normalized relational schema
-- Data quality checks (missing data, duplicates, anomalies)
-- KPI-focused analytics queries
+- Fully automated data ingestion without manual input
+- Normalized relational schema to reduce redundancy
+- Data quality checks (missing records, duplicate scans, anomalies)
+- KPI-oriented analytical queries for operational insights
 
 ## Example KPIs
 - Daily scan volume
 - Unique user activity
 - Data completeness rate
-- Anomaly detection (duplicate scans)
+- Duplicate scan anomaly rate
+
+## Analytics Use Cases
+- Monitoring system usage trends over time
+- Identifying abnormal scan behavior
+- Evaluating data reliability for downstream reporting
+- Supporting operational decision-making with real-time metrics
 
 ## Tech Stack
 - Backend: PHP
 - Database: MySQL
-- Data Source: RFID (ESP8266)
+- Data Source: RFID events (ESP8266)
 - Analytics: SQL
 
 ## Notes
-This project is designed to demonstrate data engineering and analytics thinking,
-not hardware-level implementation.
+This project highlights data pipeline design, data validation logic, and analytics thinking. Hardware-level implementation details are intentionally minimized to emphasize data reliability and analytical usability.
